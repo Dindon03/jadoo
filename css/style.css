@@ -2,6 +2,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    
+}
 header{
     background-color: #fff;
     height: 70px;
@@ -48,10 +51,20 @@ a:hover{
 a:active{
     text-decoration: none;
 }
+@media screen and (max-width: 780px){
+    header{
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 9;
+    }
+    
+}
+                                                 /* section 1 */
 .section1{
     background: url(/images/illustration_principale.jpg);
     background-size: cover;
-    height: 800px;
+    width: 100%;
 }
 .section1 p{
     font-family: 'poppins-regular';
@@ -122,14 +135,23 @@ h5{
     color: #df6951;
     text-transform: uppercase;
 }
+@media screen and (max-width: 780px){
+    .section1{
+        display: flex;
+        
+
+    }
+    
+}
+                                                     /* Section 2 */
 .section2{
     background: url(/images/decor_1.svg);
     background-repeat: no-repeat;
     background-position: 97% 3%;
-    background-color: #fff;
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
+
     
 }
 .section2 h2 h3{
@@ -167,29 +189,40 @@ figcaption{
 .card2{
     width: 250px;
     margin-right: 40px;
-    z-index: 2;
+    position: relative;
 }
 .card2:hover {
     background-color: #fff;
     box-shadow: 0px 5px 20px #999;
     border-radius: 20px;
-    position: relative;
-    z-index: 2;
+    
 }
-.card2::before{
-    content: "";
+.card2 img:nth-child(2){
     position: absolute;
-    width: 100px;
-    height: 100px;
-    left: -35px;
     bottom: -35px;
-    background-image: url(/images/decoration_rose.svg);
-    background-size: cover;
+    left: -35px;
+    opacity: 0;
+    z-index: -1;
 }
-
+@keyframes rotation{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+}
+}
+.card2:hover img:nth-child(2){
+    opacity: 1;
+    animation-play-state:running;
+    animation-name: rotation;
+    animation-duration: 2s;
+}
 .produit{
     color: #1e1d4c;
 }
+
+                                                     /* Section 3 */
 .section3 p{
     font-size: 16px;
     color: #3e3f43;
@@ -220,10 +253,11 @@ figcaption{
     border-radius: 50%;
 }
 .button-play img{
-    width: 73px;
-    padding: 3px;
+    width: 72px;
+    margin: 3px;
     display: flex;
     justify-items: center;
+    
 }
 .button-play img:hover{
     opacity: 90%;
@@ -238,7 +272,7 @@ figcaption{
 article{
     display: block;
     margin-left: 150px;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 .section3 article h4{
     max-width: 640px;
@@ -256,6 +290,7 @@ article{
 .titre_commande{
     color: #22232c;
 }
+                                                 /* Section 4 */
 .section4{
     background-image: url(/images/illustration_commander.jpg);
     background-size: cover;
@@ -275,6 +310,7 @@ article{
     padding-bottom: 20px;
     padding-top: 20px;
 }
+                                                  /* Section 5 */
 .section5{
     font-family: 'poppins-regular';
     font-weight: 700;
@@ -351,6 +387,7 @@ input:active{
     font-size: 16px;
     color: #000;
 }
+                                                   /* Footer */
 footer{
     font-size: 16px;
     background-color: #f3f3f3;
