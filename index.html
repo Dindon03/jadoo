@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -42,50 +42,56 @@
             <div class="section2">
                 <h3>Découvrez</h3>
                 <h2>les nouveautés jadoo</h2>
-                <article class="plat">
-                    <figure class="card">
-                        <img src="./images/plat_1.png" alt="Boulettes de poulet">
-                        <figcaption>Boulettes de poulet au</br> gingembre sauce sucrée salée</br> "Tsukuné"</figcaption>
-                    </figure>
-                    <figure class="card">
-                        <img src="./images/plat_2.png" alt="Nouilles japonaises">
-                        <figcaption>Nouilles japonaises chaudes à base de farine de blé "Udon"</figcaption>
-                    </figure>        
-                    <figure class="card">
-                        <img src="./images/plat_3.png" alt="Échine de porc">
-                        <figcaption>Échine de porc panée à la japonaise "Tonkatsu-Teishoku"</figcaption>
-                    </figure>
-                </article>
+                <div class="plat">
+                    <article class="card">
+                        <figure>
+                            <img src="./images/plat_1.png" alt="Boulettes de poulet">
+                            <figcaption>Boulettes de poulet au</br> gingembre sauce sucrée salée</br> "Tsukuné"</figcaption>
+                        </figure>
+                    </article>
+                    <article class="card">
+                        <figure>
+                            <img src="./images/plat_2.png" alt="Nouilles japonaises">
+                            <figcaption>Nouilles japonaises chaudes à base de farine de blé "Udon"</figcaption>
+                        </figure>
+                    </article>
+                    <article class="card">     
+                        <figure>
+                            <img src="./images/plat_3.png" alt="Échine de porc">
+                            <figcaption>Échine de porc panée à la japonaise "Tonkatsu-Teishoku"</figcaption>
+                        </figure>
+                    </article>
+                </div>
                 <article class="maki">
                     <div class="card2">
                         <figure>
                             <img src="./images/maki_1.png" alt="">
-                            <figcaption><span class="produit">California Tobiko</span><br>
-                            Saumon, thon, mayonnaise</figcaption>
+                            <figcaption><p class="produit">California Tobiko</p>
+                            <p>Saumon, thon, mayonnaise</p></figcaption>
                         </figure>
                         <img src="/images/decoration_rose.svg">
                     </div>
                     <div class="card2">
                         <figure>
                             <img src="./images/maki_2.png" alt="">
-                            <figcaption><span class="produit">California Rolls</span><br>
-                            Saumon, avocat et mayonnaise</figcaption>
+                            <figcaption><p class="produit">California Rolls</p>
+                            <p>avocat et mayonnaise</p></figcaption>
                         </figure>
                         <img src="/images/decoration_rose.svg">
                     </div>
                     <div class="card2">
                         <figure>
                             <img src="./images/maki_3.png" alt="">
-                            <figcaption><span class="produit">Ebi</span><br>
-                            Crevette, avocat, menthe, coriandre</figcaption>
+                            <figcaption><p class="produit">Ebi</p>
+                            <p>Crevette, avocat, menthe, coriandre</p></figcaption>
                         </figure>
                         <img src="/images/decoration_rose.svg">
                     </div>
                     <div class="card2">
                         <figure>
                             <img src="./images/maki_4.png" alt="">
-                            <figcaption><span class="produit">ikura Rolls</span><br>
-                            Oeufs de saumon</figcaption>   
+                            <figcaption><p class="produit">ikura Rolls</p>
+                            <p>Oeufs de saumon</p></figcaption>   
                         </figure>
                         <img src="/images/decoration_rose.svg">
                     </div>
@@ -109,9 +115,7 @@
                     </h4>
                 </article>
                     <div class="illustration">
-                        
-                        <img src="/images/wrapper_illustration_1.jpg" alt="">
-                       
+                        <img src="/images/wrapper_illustration_1.jpg" alt=""> 
                         <img src="/images/wrapper_illustration_2.jpg" alt="">
                     </div>   
             </div>
@@ -121,15 +125,30 @@
                 <article>
                     <h3>RAPIDE ET PRATIQUE</h3>
                     <h2><span class="rouge">Commandez</span></br>sur le site Jadoo</h2>
-                        <div class="Commander_jadoo">
-                            <a href="#"><img src="/images/logo_uberEats.png" height="60px"><p><span class="titre_commande">UberEats</span></br> Commandez tous vos plats depuis</br> UberEats</a></p>
-                        </div>
-                        <div class="Commander_jadoo">
-                            <a href="#"><img src="/images/logo_jadoo_1.svg" height="60px"><p><span class="titre_commande">Jadoo.fr</span></br> Ou commandez en ligne sur le site</br> officiel de Jadoo</a></p>
-                        </div>
-                        <div class="Commander_jadoo">
-                            <img src="/images/logo_transport.png"><p><span class="titre_commande">Livraison ultra rapide</span></br> 
-                            Soyez livré en 20 minutes maximum</p>
+                        <div class="Contener-commander>
+                            <a class="Commander_jadoo" href="#">
+                                <figure class="Commander_jadoo">
+                                    <img src="/images/logo_uberEats.png" height="60px">
+                                <figcaption>
+                                    <p><span class="titre_commande">UberEats</span></p>
+                                    <p> Commandez tous vos plats depuis</br> UberEats</p>
+                                </figcaption>
+                                </figure></a>
+                            <a class="Commander_jadoo" href="#">
+                                <figure class="Commander_jadoo">
+                                    <img src="/images/logo_jadoo_1.svg" height="60px">
+                                <figcaption>
+                                    <p><span class="titre_commande">Jadoo.fr</span></p>
+                                    <p>Ou commandez en ligne sur le site</br> officiel de Jadoo</p>
+                                </figcaption>
+                                </figure></a>
+                            <figure class="Commander_jadoo">
+                                <img src="/images/logo_transport.png">
+                            <figcaption>
+                                <p><span class="titre_commande">Livraison ultra rapide</span></p>
+                                <p>Soyez livré en 20 minutes maximum</p>
+                            </figcaption>
+                            </figure>
                         </div>
                     <button class="button-découvrir">Découvrir la carte</button>
                 </article>
@@ -138,8 +157,10 @@
         <section>
             <div class="section5">
                 <article>
+                    <div class="titre-section5">
                         <h3>PRENDRE RENDEZ-VOUS</h3>
                         <h2>Contactez-nous</br> pour réserver au restaurant</h2>
+                    </div>
                     <div class="contenu-formulaire">
                         <div class="contenu-text">
                             <div class="formulaire1">

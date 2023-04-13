@@ -1,9 +1,12 @@
 *{
     margin: 0;
     box-sizing: border-box;
-}
-body{
     
+}
+@media screen and (max-width: 650px){
+    body{
+        overflow-x: hidden;
+    }
 }
 header{
     background-color: #fff;
@@ -26,7 +29,7 @@ header{
 }
 nav{
     float: right;
-    margin-right: 180px; 
+    padding-right: 180px; 
     height: 100%;  
     
 }
@@ -51,20 +54,28 @@ a:hover{
 a:active{
     text-decoration: none;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 650px){
     header{
         display: block;
         position: sticky;
         top: 0;
         z-index: 9;
     }
-    
+    .logo_header{
+        padding-left: 5%;
+    }
+    header a{
+        display: none;
+    }
 }
                                                  /* section 1 */
 .section1{
     background: url(/images/illustration_principale.jpg);
     background-size: cover;
     width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 120px;
 }
 .section1 p{
     font-family: 'poppins-regular';
@@ -135,13 +146,19 @@ h5{
     color: #df6951;
     text-transform: uppercase;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 650px){
     .section1{
-        display: flex;
-        
-
+        padding: 0;
     }
-    
+    .section1 article{
+        padding: 5%;
+        margin: 0;
+        text-align: center;
+    }
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
 }
                                                      /* Section 2 */
 .section2{
@@ -159,10 +176,10 @@ h5{
 }
 .plat{
     display: flex;
-    align-items: center;
     justify-content: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    flex-wrap: wrap;
 }
 .card{
     width: 320px;
@@ -185,6 +202,7 @@ figcaption{
     justify-content: center;
     align-items: center;
     padding-bottom: 100px;
+    flex-wrap: wrap;
 }
 .card2{
     width: 250px;
@@ -221,6 +239,37 @@ figcaption{
 .produit{
     color: #1e1d4c;
 }
+@media screen and (max-width: 650px){
+    .maki{
+        display: flex;
+        flex-direction: row;
+    }
+    .maki .card2 figure{
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .maki .card2 figure figcaption{
+        flex-direction: column;
+        text-align: left;
+        margin: 0;
+        font-size: 16px;
+
+    }
+    .maki .card2 figure img{
+        max-width: 100px;
+        
+    }
+    .card2:hover img:nth-child(2){
+        display: none;
+    }
+    .card2 img:nth-child(2){
+        display: none;
+    }
+    .card2:hover{
+        box-shadow: none;
+    }
+}   
 
                                                      /* Section 3 */
 .section3 p{
@@ -269,7 +318,7 @@ figcaption{
     background-position: 0px 80px;
 
 }
-article{
+.section3 article{
     display: block;
     margin-left: 150px;
     padding-top: 150px;
@@ -290,25 +339,51 @@ article{
 .titre_commande{
     color: #22232c;
 }
+@media screen and (max-width: 650px){
+    .section3{
+        background-size: 100%;
+    }
+    .illustration{
+        border: 0;
+        padding: 0;
+        margin: 0;
+        top:0;
+    }
+    .illustration img{
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+}
                                                  /* Section 4 */
 .section4{
     background-image: url(/images/illustration_commander.jpg);
     background-size: cover;
     display: block;
     justify-content: flex-end;
-    
+    padding-top: 430px;
+    padding-bottom: 100px;
+    padding-left: 120px;
 
 }
 .section4 article{
     display: inline-block;
-    padding-top: 500px;
-    margin-bottom: 100px;
 }
 .Commander_jadoo{
-    display: flex;
-    text-align:left;
-    padding-bottom: 20px;
-    padding-top: 20px;
+        text-align: left;
+}
+@media screen and (max-width: 650px){
+    .section4{
+        padding: 5%;
+        text-align: center;
+        background-image: none;
+    }
+    .section4 article{
+        font-size: 16px;
+    }
+    
+    
 }
                                                   /* Section 5 */
 .section5{
@@ -319,33 +394,45 @@ article{
     text-align: center;
     display: flex;
     justify-content: center;
+    padding: 100px 8% 100px 8%;
+
+}
+.titre-section5{
+    padding: auto;
+}
+.section5 article{
+    width: 100%;
 }
 .contenu-formulaire{
-    width: 1020px;
+    display: table;
+    width: 100%;
+    max-width: 1000px;
     height: 560px;
-    margin: 50px;
     box-shadow: 0px 5px 20px #999;
     border-radius: 30px;
     display: flex; 
     overflow: hidden;
+    margin: auto;
 }
 .contenu-text{
-    width: 510px;
+    width: 50%;
     display: flex;
     flex-direction: column;
+
 }
 .formulaire1{
     padding: 50px 0 20px 50px;
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
 }
 .formulaire2{
     text-align: start;
     padding: 20px 0 0 50px;
     display: block;
+    text-align: center;
 }
 .contenu-image{
-    width: 510px;
+    width: 50%;
     background-image: url(/images/illustration_formulaire.jpg);
     background-size: cover;
 }
@@ -354,7 +441,7 @@ article{
     flex-direction: column;
     margin-bottom: 30px;
     line-height: 2em;
-    width: 400px;
+    width: 90%;
     margin-right: 15px;
 }
 input{
@@ -369,6 +456,10 @@ input:active{
     display: flex;
     flex-direction: row;
     width: 415px;
+    text-align: left;
+}
+.champ{
+    text-align: left;
 }
 .button-formulaire{
     font-family: arial;
@@ -387,6 +478,34 @@ input:active{
     font-size: 16px;
     color: #000;
 }
+@media screen and (max-width: 650px){
+    h2{
+        font-size: 40px;
+    }
+    .formulaire1{
+        text-align: center;
+        padding: 20px;
+        
+    }
+    .formulaire2{
+        padding: 0;
+
+    }
+    .contenu-text{
+        width: 100%;
+    }
+    .contenu-formulaire{
+        box-shadow: none;
+        overflow:visible;
+    }
+    .champ-inline{
+        flex-direction: column;
+    }
+    .button-formulaire{
+        margin: auto;
+        margin-top: 50px;
+    }
+}
                                                    /* Footer */
 footer{
     font-size: 16px;
@@ -403,6 +522,7 @@ footer{
     margin-bottom: 50px;
     margin-left: 20%;
     margin-right: 20%;
+    flex-wrap: wrap;
     
 }
 .footer2,.footer3{
@@ -441,10 +561,6 @@ footer,.formulaire,.formulaire button,.section3 p{
 }
 .footer4{
     display: block;
-    d
-}
-footer a{
-    text-decoration: none;
 }
 a:visited {
     text-decoration: none;
