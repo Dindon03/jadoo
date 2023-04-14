@@ -188,10 +188,10 @@ h5{
     overflow: hidden;
     margin-right: 40px;
 }
-figcaption{
+.section2 figcaption{
     font-family: 'poppins-regular';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 2em;
     color: #5e6282;
     text-align: center;
@@ -222,6 +222,12 @@ figcaption{
     opacity: 0;
     z-index: -1;
 }
+.card2:hover img:nth-child(2){
+    opacity: 1;
+    animation-play-state:running;
+    animation-name: rotation;
+    animation-duration: 2s;
+}
 @keyframes rotation{
     from{
         transform: rotate(0deg)
@@ -230,16 +236,106 @@ figcaption{
         transform: rotate(360deg)
 }
 }
-.card2:hover img:nth-child(2){
-    opacity: 1;
-    animation-play-state:running;
-    animation-name: rotation;
-    animation-duration: 2s;
-}
 .produit{
     color: #1e1d4c;
 }
 @media screen and (max-width: 650px){
+    .plat{
+        flex-wrap: nowrap;
+        
+    }
+    .plat .card{
+        opacity: 0;
+        margin: 0;
+    }
+    .plat .card:nth-child(1){
+        animation: card1 19.5s 0s infinite;
+    }
+    @keyframes card1{
+        0%{ 
+            opacity: 0;
+            transform: translateX(200%);
+        }
+        2.25%{
+            opacity: 1;
+            transform: translateX(100%);
+
+        }
+        33%{
+            opacity: 1;
+            transform: translateX(100%);
+        }
+        35.25%{
+            opacity: 0;
+            transform: translateX(0%);
+        }
+        100%{
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    }
+    .plat .card:nth-child(2){
+        animation: card2 19.5s 0s infinite;
+    } 
+    @keyframes card2 {
+        0%{ 
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        35.25%{
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        37.50%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        66%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        68.25%{
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100%{
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+    .plat .card:nth-child(3){
+        animation: card3 19.5s 0s infinite;
+    }
+    @keyframes card3 {
+        0%{ 
+            opacity: 0;
+            transform: translateX(0%);
+        }
+        68.25%{
+            opacity: 0;
+            transform: translateX(0%);
+
+        }
+        70.25%{
+            opacity: 1;
+            transform: translateX(-100%);
+        }
+        97.75%{
+            opacity: 1;
+            transform: translateX(-100%);
+        }
+        100%{
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+    }
+    .card{
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 320px;
+        margin-left: 1rem;
+    
+    }
     .maki{
         display: flex;
         flex-direction: row;
@@ -329,9 +425,9 @@ figcaption{
     text-align: justify;
 }
 .illustration{
+    display: flex;
     position: relative;
     top: 300px;
-
 }
 .rouge{
     color: #df6951;
@@ -342,47 +438,78 @@ figcaption{
 @media screen and (max-width: 650px){
     .section3{
         background-size: 100%;
+        
     }
-    .illustration{
-        border: 0;
-        padding: 0;
+    .illustration {
+        display: block;
         margin: 0;
         top:0;
     }
-    .illustration img{
-        border: 0;
-        padding: 0;
-        margin: 0;
+    .section3 article{
+        display: none;
     }
-    
+   
 }
                                                  /* Section 4 */
 .section4{
     background-image: url(/images/illustration_commander.jpg);
     background-size: cover;
     display: block;
-    justify-content: flex-end;
     padding-top: 430px;
     padding-bottom: 100px;
     padding-left: 120px;
 
 }
 .section4 article{
-    display: inline-block;
+    display: block;
+    max-width: 390px;
 }
+.conteneur-lien{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.Conteneur-commander{
+    display: block;
+}
+
 .Commander_jadoo{
-        text-align: left;
+    font-family: 'poppins-regular';
+    font-weight: 500;
+    font-size: 16px;
+    color: #5e6282;
+}
+
+.Commander_jadoo p{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.conteneur-lien .Commander_jadoo{
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 40px;
+}
+.Conteneur-commander .Commander_jadoo img, .Conteneur-commander .Commander_jadoo figcaption{
+    display: inline-block;
+    align-items: center;
+
 }
 @media screen and (max-width: 650px){
     .section4{
         padding: 5%;
         text-align: center;
-        background-image: none;
+        background-image: none;    
     }
-    .section4 article{
-        font-size: 16px;
+    .Commander_jadoo{
+        font-size: 14px;
     }
-    
+    .section4 .conteneur-lien{
+        justify-content: center;
+    }
     
 }
                                                   /* Section 5 */
@@ -512,22 +639,28 @@ footer{
     background-color: #f3f3f3;
     font-family: poppins-regular;
     font-size: 18px;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding: 50px 10% 30px 10%;  
 }
 .contenu-footer{
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    margin-left: 20%;
-    margin-right: 20%;
     flex-wrap: wrap;
+    align-items: center;
     
 }
-.footer2,.footer3{
-    text-align: left;
+.footer2{
     line-height: 2em;
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px 0 20px; 
+}
+.footer2 div{
+    display: inline-block;
+    vertical-align: top;
+}
+.footer2p1{
+    margin-right: 40px;
 }
 footer,.formulaire,.formulaire button,.section3 p{
     font-family: 'poppins-regular';
@@ -543,24 +676,36 @@ footer,.formulaire,.formulaire button,.section3 p{
     font-size: 10px;
     font-weight: 400;
     color: #fff;
-    text-align: center;
     background-color: #000;
-    height: 35px;
-    width: 120px;
+    padding: 10px 15px;
     border-radius: 20px;
     display: inline-block;
     vertical-align: middle;
 
 }
 .footer1{
-    text-align: left;
     line-height: 2em;
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px 0 20px;
+
 }
 .footer1 img{
     padding-right: 20px;
 }
-.footer4{
-    display: block;
+.footer3{
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px 0 20px;
+    vertical-align: top;
+
+}
+.copyright{
+    text-align: center;
 }
 a:visited {
     text-decoration: none;

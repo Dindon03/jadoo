@@ -42,25 +42,27 @@
             <div class="section2">
                 <h3>Découvrez</h3>
                 <h2>les nouveautés jadoo</h2>
-                <div class="plat">
-                    <article class="card">
-                        <figure>
-                            <img src="./images/plat_1.png" alt="Boulettes de poulet">
-                            <figcaption>Boulettes de poulet au</br> gingembre sauce sucrée salée</br> "Tsukuné"</figcaption>
-                        </figure>
-                    </article>
-                    <article class="card">
-                        <figure>
-                            <img src="./images/plat_2.png" alt="Nouilles japonaises">
-                            <figcaption>Nouilles japonaises chaudes à base de farine de blé "Udon"</figcaption>
-                        </figure>
-                    </article>
-                    <article class="card">     
-                        <figure>
-                            <img src="./images/plat_3.png" alt="Échine de porc">
-                            <figcaption>Échine de porc panée à la japonaise "Tonkatsu-Teishoku"</figcaption>
-                        </figure>
-                    </article>
+                <div class="conteneur-plat">
+                    <div class="plat">
+                        <article class="card">
+                            <figure>
+                                <img src="./images/plat_1.png" alt="Boulettes de poulet">
+                                <figcaption>Boulettes de poulet au</br> gingembre sauce sucrée salée</br> "Tsukuné"</figcaption>
+                            </figure>
+                        </article>
+                        <article class="card">
+                            <figure>
+                                <img src="./images/plat_2.png" alt="Nouilles japonaises">
+                                <figcaption>Nouilles japonaises chaudes à base de farine de blé "Udon"</figcaption>
+                            </figure>
+                        </article>
+                        <article class="card">     
+                            <figure>
+                                <img src="./images/plat_3.png" alt="Échine de porc">
+                                <figcaption>Échine de porc panée à la japonaise "Tonkatsu-Teishoku"</figcaption>
+                            </figure>
+                        </article>
+                    </div>
                 </div>
                 <article class="maki">
                     <div class="card2">
@@ -115,8 +117,12 @@
                     </h4>
                 </article>
                     <div class="illustration">
-                        <img src="/images/wrapper_illustration_1.jpg" alt=""> 
-                        <img src="/images/wrapper_illustration_2.jpg" alt="">
+                        <figure>
+                            <img src="/images/wrapper_illustration_1.jpg"alt="">
+                        </figure> 
+                        <figure>
+                            <img src="/images/wrapper_illustration_2.jpg"alt="">
+                        </figure>
                     </div>   
             </div>
         </section>
@@ -124,24 +130,27 @@
             <div class="section4">
                 <article>
                     <h3>RAPIDE ET PRATIQUE</h3>
-                    <h2><span class="rouge">Commandez</span></br>sur le site Jadoo</h2>
-                        <div class="Contener-commander>
+                    <h2><span class="rouge">Commandez</span> sur le site Jadoo</h2>
+                    <div class="conteneur-lien">
+                        <div class="Conteneur-commander">
                             <a class="Commander_jadoo" href="#">
-                                <figure class="Commander_jadoo">
+                                <figure>
                                     <img src="/images/logo_uberEats.png" height="60px">
                                 <figcaption>
                                     <p><span class="titre_commande">UberEats</span></p>
                                     <p> Commandez tous vos plats depuis</br> UberEats</p>
                                 </figcaption>
-                                </figure></a>
+                                </figure>
+                            </a>
                             <a class="Commander_jadoo" href="#">
-                                <figure class="Commander_jadoo">
+                                <figure>
                                     <img src="/images/logo_jadoo_1.svg" height="60px">
                                 <figcaption>
                                     <p><span class="titre_commande">Jadoo.fr</span></p>
                                     <p>Ou commandez en ligne sur le site</br> officiel de Jadoo</p>
                                 </figcaption>
-                                </figure></a>
+                                </figure>
+                            </a>
                             <figure class="Commander_jadoo">
                                 <img src="/images/logo_transport.png">
                             <figcaption>
@@ -150,7 +159,8 @@
                             </figcaption>
                             </figure>
                         </div>
-                    <button class="button-découvrir">Découvrir la carte</button>
+                        <button class="button-découvrir">Découvrir la carte</button>
+                    </div>
                 </article>
             </div>
         </section>
@@ -208,23 +218,25 @@
                     <p>Un voyage gastronomique entre</br> le Japon et la France</p>
                 </div>
                 <div class="footer2">
-                    <p><span class="titre_footer">Restaurant</span></p>    
-                    <p><a href="#">Nouveautés</a></p>    
-                    <p><a href="#">Découvrir</a></p>
-                    <p><a href="#">Commander</a></p>
+                    <div class="footer2p1">
+                        <p><span class="titre_footer">Restaurant</span></p>    
+                        <p><a href="#">Nouveautés</a></p>    
+                        <p><a href="#">Découvrir</a></p>
+                        <p><a href="#">Commander</a></p>
+                    </div>
+                    <div class="footer2p2">
+                        <p><span class="titre_footer">Contact</span></p>
+                        <a href="">Prendre RDV</a></p>
+                    </div>
                 </div>
                 <div class="footer3">
-                    <p><span class="titre_footer">Contact</span></p>
-                    <a href="">Prendre RDV</a></p>
-                </div>
-                <div class="footer4">
                     <img src="/images/logo_uberEats_2.svg" height="30px">
                     <p>Téléchargez UberEats</p>
                     <button class="button-footer"><img src="/images/logo_google_play.svg">GOOGLE PLAY</button>
                     <button class="button-footer"><img src="/images/logo_apple.svg">APPLE STORE</button>
                 </div>
             </div>
-            <p>Tous droits réservés @jadoo.com</p>
+            <p class="copyright">Tous droits réservés @jadoo.com</p>
         </footer>
     </main>
 </body>
