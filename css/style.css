@@ -33,6 +33,9 @@ nav{
     height: 100%;  
     
 }
+nav img{
+    opacity: 0;
+}
 ul{
     display: flex;
     list-style-type: none;
@@ -56,17 +59,32 @@ a:active{
 }
 @media screen and (max-width: 650px){
     header{
-        display: block;
+        display: flex;
         position: sticky;
         top: 0;
         z-index: 9;
     }
     .logo_header{
+        display:inline-flex;
         padding-left: 5%;
+        width: 50%;
+        justify-items: center;
+        
     }
     header a{
         display: none;
     }
+    nav{
+        display: flex;
+        padding-right: 5%;
+    }
+    nav img{
+        opacity: 1;
+        
+        
+    }
+
+    
 }
                                                  /* section 1 */
 .section1{
@@ -382,17 +400,18 @@ h5{
     position: relative;
     width: 305px;
     height: 160px;
-    padding-top: 100px;
+    top: 100px;
     margin-left: 150px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 .video img{
-    width: 100%;
-    border-radius: 20px;  
+    width: 100%
 }
 .button-play{
-    position: relative;
+    position: absolute;
     width: 80px;
-    bottom: 130px;
+    bottom: 40px;
     left: 120px;
     background-color: #fff;
     border-radius: 50%;
@@ -429,6 +448,12 @@ h5{
     position: relative;
     top: 300px;
 }
+.illustration .chef-caché{
+    display: none;
+}
+.illustration figure{
+    border: none;
+}
 .rouge{
     color: #df6951;
 }
@@ -438,17 +463,36 @@ h5{
 @media screen and (max-width: 650px){
     .section3{
         background-size: 100%;
-        
+        background-image: none;
     }
     .illustration {
         display: block;
         margin: 0;
         top:0;
     }
+    .illustration .chef-caché{
+        width: 100%;
+        display: flex;   
+    }
+    .illustration figure{
+        border: none;
+    }
     .section3 article{
         display: none;
     }
-   
+   .video{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-bottom: 100px;
+    border-radius: 0;
+    
+   }
+   .video .button-play{
+    top: 70px;
+    left: 160px;
+    height: 80px;
+   }
 }
                                                  /* Section 4 */
 .section4{
@@ -702,8 +746,9 @@ footer,.formulaire,.formulaire button,.section3 p{
     margin-right: auto;
     padding: 0 20px 0 20px;
     vertical-align: top;
-
+    line-height: 2em;
 }
+
 .copyright{
     text-align: center;
 }
