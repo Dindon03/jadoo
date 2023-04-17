@@ -3,6 +3,9 @@
     box-sizing: border-box;
     
 }
+body{
+    
+}
 @media screen and (max-width: 650px){
     body{
         overflow-x: hidden;
@@ -24,8 +27,10 @@ header{
     padding-left: 150px;
     vertical-align: middle;
 }
-.logo_header img{
+.logo_header img:first-child{
     margin-right: 15px;
+    animation: rotation3d 10s linear infinite;
+
 }
 nav{
     float: right;
@@ -122,10 +127,12 @@ a:active{
     border-radius: 10px;
     margin-top: 20px;
     border-style: none;
+    transition: transform 0.2s;
 }
 button:hover{
     opacity: 90%;
     cursor: pointer;
+    transform: scale(1.1);
 }
 h1{
     font-family: 'volkhov-bold';
@@ -177,6 +184,10 @@ h5{
         font-size: 40px;
         text-align: center;
     }
+    .rose1{
+         background-position: 135px 135px; 
+         background-size: 50%;
+    }
 }
                                                      /* Section 2 */
 .section2{
@@ -205,6 +216,7 @@ h5{
     border-radius: 20px;
     overflow: hidden;
     margin-right: 40px;
+    
 }
 .section2 figcaption{
     font-family: 'poppins-regular';
@@ -221,11 +233,13 @@ h5{
     align-items: center;
     padding-bottom: 100px;
     flex-wrap: wrap;
+    
 }
 .card2{
     width: 250px;
     margin-right: 40px;
     position: relative;
+    
 }
 .card2:hover {
     background-color: #fff;
@@ -476,6 +490,8 @@ h5{
     }
     .illustration figure{
         border: none;
+        padding: 0;
+        margin: 0;
     }
     .section3 article{
         display: none;
@@ -484,13 +500,13 @@ h5{
     width: 100%;
     height: 100%;
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 95px;
     border-radius: 0;
     
    }
    .video .button-play{
     top: 70px;
-    left: 160px;
+    left: 200px;
     height: 80px;
    }
 }
@@ -570,6 +586,7 @@ h5{
 }
 .titre-section5{
     padding: auto;
+    margin-bottom: 40px ;
 }
 .section5 article{
     width: 100%;
@@ -584,16 +601,19 @@ h5{
     display: flex; 
     overflow: hidden;
     margin: auto;
+    
+    
 }
 .contenu-text{
     width: 50%;
     display: flex;
     flex-direction: column;
+    
 
 }
 .formulaire1{
     padding: 50px 0 20px 50px;
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
 }
 .formulaire2{
@@ -616,12 +636,13 @@ h5{
     margin-right: 15px;
 }
 input{
-    border:0;
+    border: transparent;
     box-shadow: 0 1px 0 #999;
+    outline: 0;
 }
-input:active{
-    border-style:none;
-    border: 0;
+input:focus{
+    box-shadow: 0 1px 0 #1886ff;
+    
 }
 .champ-inline{
     display: flex;
@@ -642,8 +663,9 @@ input:active{
     color: #fff;
     border: 0;
     border-radius: 5px;
-    margin-left: 150px;
-    margin-top: 40px;
+    margin-top: 30px;
+    transition: transform 0.2s;
+    
 }
 .formulaire{
     font-size: 16px;
@@ -684,6 +706,7 @@ footer{
     font-family: poppins-regular;
     font-size: 18px;
     padding: 50px 10% 30px 10%;  
+    
 }
 .contenu-footer{
     display: flex;
@@ -725,6 +748,7 @@ footer,.formulaire,.formulaire button,.section3 p{
     border-radius: 20px;
     display: inline-block;
     vertical-align: middle;
+    transition: transform 0.2s;
 
 }
 .footer1{
@@ -734,10 +758,15 @@ footer,.formulaire,.formulaire button,.section3 p{
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px 0 20px;
+    
 
 }
-.footer1 img{
+.footer1 img:first-child{
     padding-right: 20px;
+    -name:  rotation2, translation3d;
+    animation-delay:  5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 .footer3{
     display: inline-block;
@@ -755,3 +784,35 @@ footer,.formulaire,.formulaire button,.section3 p{
 a:visited {
     text-decoration: none;
     }
+@keyframes translation3d{
+    0% {
+        transform: perspective(100px) translate3d(20px, 0px, 0px);
+        
+    }
+    50% {
+        transform: perspective(100px) translate3d(0px, 0px, 50px);
+        
+    }
+    
+    100% {
+        transform: perspective(100px) translate3d(20px, 0px, 0px);
+        
+    }
+}
+@keyframes rotation2{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+      50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
